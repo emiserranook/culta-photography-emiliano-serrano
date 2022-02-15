@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Meie+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Meie+Script&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+// backgound color
+$bcolor1:turquoise;
+
+
+// colors
+$color1:blue;
+
+// altura
+$alto:350px;
+
+// fonts
+$font:"lobster";
+
+// sizes
+$size1:30px;
+$size2:50px;
+$size3:100px;
+
+.formato{
+    background-color: $bcolor1;
+    height: 190px;
+}
+.formato__logo{
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    font-size: ($size3)-($size1);
+    text-align: center;
+}
+.formato__logo__span{
+    color: $color1;
+    font-family:$font, cursive;
+    font-size: 25px;
+
+}
+.navbar{
+    float: left;
+}
+.navbar__brand--color{
+    color:red;
+}
+.main__debila{
+    background-size: cover;
+    background-position: center;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    background-image: url(img/camradefoto.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+h3{
+    text-align: center;
+    font-size: 50px;
+}
+h3--nuevo{
+    @extend h3 ;
+    color: yellow;
+    text-transform: capitalize;
+}
+
+h2{
+    background-color: orange;
+    text-align: center;
+
+}
+.sec{
+    height: $alto*2;
+    width: 100%;
+    background-color:turquoise;
+    color: white;
+}
+$colors:(
+    red1: blue,
+    red2: white,
+);
+.fondo{
+    height: 300px;
+    width: 350px;
+    background-color:red1;
+    border: 2px solid red2;
+}
+@mixin sizess {
+    height: 250px;
+    width: 900px;
+    background-color: lightblue;
+}
+.caja10{
+    @include sizess;
+    padding: 50px;
+    border-width: 10px;
+    border-color: tomato;
+    border-style: solid;
+    border: 20px ridge gold;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.h2__contenedor{
+    width: 100%;
+    height: 750px;
+    background-color:turquoise;
+    display: grid;
+    grid-gap:10px;
+}
+.caja{
+    color: white;
+    background-color: chocolate;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.caja:hover{
+    transform: scale(1.3);
+}
+@media only screen and (max-width:767px){
+    .h2__contenedor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .caja1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-image:url(img/camara1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-image: url(img/mar.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja3{
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-image: url(img/camara4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja4{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-image: url(img/camara3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja5{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        background-image: url(img/camara2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja6{
+        grid-column: 3/5;
+        grid-row: 3/4;
+        background-image: url(img/playa.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width:1024px){
+    .h2__contenedor{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .caja1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-image:url(img/camara1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-image: url(img/mar.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja3{
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-image: url(img/camara4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja4{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-image: url(img/camara3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja5{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        background-image: url(img/camara2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja6{
+        grid-column: 3/5;
+        grid-row: 3/4;
+        background-image: url(img/playa.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .h2__contenedor{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .caja1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-image:url(img/camara1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-image: url(img/mar.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja3{
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-image: url(img/camara4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja4{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background-image: url(img/camara3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja5{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        background-image: url(img/camara2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .caja6{
+        grid-column: 3/5;
+        grid-row: 3/4;
+        background-image: url(img/playa.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+.eventos article h4{
+    text-align:center;
+    background-color: orange;
+}
+.sec3{
+    width: 100%;
+}
+.carousel-indicators li{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.cuadro:hover{
+    transform: scale(1.1);
+}
+.show{
+    font-size: 30px;
+    text-align: center;
+}
+.eventos{
+    font-size: 30px;
+    text-align: center;
+}
+.bodas{
+    font-size: 30px;
+    text-align: center;
+}
+.desfile{
+    font-size: 30px;
+    text-align: center;
+}
+.sec4 .contacto{
+    position: absolute;
+    color:black;
+    background-color: white;
+    height: 600px;
+    width: 250px;
+    margin: 0 auto;
+    left: 50px;
+    right: 50px;
+}
+$final:footer1;
+
+.final__footer{
+    @if $final==footer{
+    background-color:red;
+    background-image: linear-gradient(to top,brown, black);
+    color: brown;
+    font-size: 25px;
+    text-align: center;
+    }
+    @else if $final==fotter0{
+    background-color: yellow;
+    background-image: linear-gradient(to top,brown, blue);
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    }
+    @else {
+    background-color: orange;
+    background-image: linear-gradient(to top,brown, orange);
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    }
+}
