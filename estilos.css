@@ -455,18 +455,6 @@ h2 {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1400px) {
-  .fondo {
-    background-image: url(img/foto1.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    width: 400px;
-    background-color: red1;
-    border: 2px solid red2;
-    margin-left: 400px;
-  }
-}
 .eventos article h4 {
   text-align: center;
   background-color: orange;
